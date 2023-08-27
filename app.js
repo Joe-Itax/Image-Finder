@@ -17,7 +17,7 @@ fetch(url, {
       html += `
     <div class="image">
         <figure>
-          <img src="${data.photos[i].src.large2x}" alt="${data.photos[i].alt}" />
+          <img src="${data.photos[i].src.large2x}" alt="${data.photos[i].alt}" title="${data.photos[i].alt}"/>
           <figcaption><i class="ri-user-fill"></i></figcaption>
           <a href="${data.photos[i].photographer_url}" target="_blank">${data.photos[i].photographer}</a>
         </figure>
