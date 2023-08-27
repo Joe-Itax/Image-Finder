@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* box-shadow: 0 0 0 1px red inset; */
+}
+
+:root {
+  --bgc: #f1f1f1;
+}
+
+body {
+  background: var(--bgc);
+}
+
+main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main .welcom {
+  background-image: url("./bcgImage.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main .welcom .content-welcom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  padding: 2rem;
+  /* border: 1px solid red; */
+}
+
+main .welcom h1 {
+  color: #fff;
+  font-size: 3rem;
+  letter-spacing: .2rem;
+  line-height: 5rem;
+  align-self: start;
+}
+
+main .welcom div p {
+  color: #fff;
+  font-size: 2rem;
+  padding: 2rem 0;
+}
+
+main .welcom div p a {
+  color: #e0e0e0;
+  font-weight: 900;
+}
+
+main .welcom .search-box {
+  width: 100%;
+  /* border: 1px solid blue; */
+  display: flex;
+}
+
+main .welcom input {
+  width: 100%;
+  padding: 1rem 2rem;
+  padding-right: 5rem;
+  font-size: 1.8rem;
+  outline: none;
+  position: relative;
+}
+
+main .welcom input:focus {
+  outline: dashed aliceblue;
+}
+
+main .welcom button {
+  position: absolute;
+  padding: 1rem;
+  right: 15%;
+  margin-top: 2px;
+  border: none;
+  border-left: 1px solid #000;
+  background: #fff;
+  cursor: pointer;
+}
+
+main .welcom button i {
+  font-size: 1.9rem;
+}
+
+main .content-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+main .content-box .img-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+main .content-box .img-box .image {
+  max-width: 25rem;
+  max-height: 100%;
+}
+
+main .content-box .img-box .image figure {
+  max-width: 100%;
+  max-height: 100%;
+  position: relative;
+}
+
+main .content-box .img-box figure img {
+  height: 80%;
+  width: 100%;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+
+main .content-box .img-box figure img:hover,
+figure a:hover~figure img {
+  filter: brightness(80%);
+}
+
+figcaption {
+  padding-left: 1rem;
+  position: absolute;
+  bottom: 1rem;
+  left: 0rem;
+  visibility: hidden;
+  transition: all .2s ease-in-out;
+}
+
+main .content-box .img-box figure img:hover~figcaption,
+figure a:hover~figcaption {
+  visibility: visible;
+}
+
+figcaption i {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+figure a {
+  position: absolute;
+  left: 2rem;
+  bottom: 1rem;
+  padding-left: 1rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  z-index: 99;
+  visibility: hidden;
+  transition: all .2s ease-in-out;
+}
+
+main .content-box .img-box figure:hover a {
+  visibility: visible;
+}
+
+figure a:hover {
+  text-decoration: underline;
+}
