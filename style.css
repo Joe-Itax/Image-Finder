@@ -12,12 +12,18 @@
 body {
   background: var(--bgc);
   font-family: 'Merriweather', serif;
-  letter-spacing: .5rem;
+  letter-spacing: 0.5rem;
   line-height: 3rem;
+  position: relative;
+}
+
+main {
+  /* display: none; */
+  /* filter: brightness(10%); */
 }
 
 main .welcom {
-  background-image: url("./bcgImage.jpeg");
+  background-image: url('./bcgImage.jpeg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -41,7 +47,7 @@ main .welcom .content-welcom {
 main .welcom h1 {
   color: #fff;
   font-size: 3rem;
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
   line-height: 5rem;
   align-self: start;
   font-family: 'Roboto', sans-serif;
@@ -113,7 +119,7 @@ main .choice-img-video a {
   color: #555;
   font-size: 1.5rem;
   font-weight: bold;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
 main .choice-img-video a:hover {
@@ -124,7 +130,7 @@ main .choice-img-video a.active {
   color: #fff;
   background-color: #000;
   border: 1px solid #000;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
 main .choice-img-video a.active:hover {
@@ -161,7 +167,8 @@ main .content-box .img-box {
 }
 
 main .content-box .img-box .image {
-  max-width: 25rem;
+  max-width: 19rem;
+  /* columns: 3; */
 }
 
 main .content-box .img-box .image figure {
@@ -174,11 +181,11 @@ main .content-box .img-box figure img {
   height: 80%;
   width: 100%;
   cursor: pointer;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 main .content-box .img-box figure img:hover,
-figure a:hover~figure img {
+figure a:hover ~ figure img {
   filter: brightness(80%);
 }
 
@@ -188,11 +195,11 @@ figcaption {
   bottom: 1rem;
   left: 0rem;
   visibility: hidden;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
-main .content-box .img-box figure img:hover~figcaption,
-figure a:hover~figcaption {
+main .content-box .img-box figure img:hover ~ figcaption,
+figure a:hover ~ figcaption {
   visibility: visible;
 }
 
@@ -209,12 +216,12 @@ figure a {
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: 700;
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
   line-height: 2rem;
   color: #fff;
   z-index: 99;
   visibility: hidden;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 main .content-box .img-box figure:hover a {
@@ -224,8 +231,6 @@ main .content-box .img-box figure:hover a {
 figure a:hover {
   text-decoration: underline;
 }
-
-
 
 /* Media for responsivity */
 @media (max-width: 600px) {
@@ -260,7 +265,7 @@ figure a:hover {
   }
 
   main .welcom input {
-    padding: 1rem 4rem 1rem .4rem;
+    padding: 1rem 4rem 1rem 0.4rem;
   }
 
   main .welcom button {
@@ -268,7 +273,6 @@ figure a:hover {
     right: 7%;
   }
 }
-
 
 @media (max-width: 450px) {
   body {
@@ -286,5 +290,41 @@ figure a:hover {
   }
 }
 
+.overlay {
+  height: 100vh;
+  width: 60%;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: #000;
+  /* background-color: transparent; */
+  filter: brightness(100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: yellow 10px solid;
+  display: none;
+}
 
-@media (max-width: 400px) {}
+.overlay figure {
+  height: 100vh;
+  width: 80%;
+  border: red 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay figure img {
+  width: 100%;
+  height: auto;
+  border: #fff 1px solid;
+}
+
+.overlay figure figcaption {
+  font-size: 8rem;
+  color: #e0e0e0;
+}

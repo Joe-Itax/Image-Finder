@@ -1,65 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Ceci est juste pour s'exercer" />
+    <link href="./style.css" rel="stylesheet" />
+    <link rel="icon" href="./image.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!-- //Font google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ceci est juste pour s'exercer">
-  <link href="./style.css" rel="stylesheet">
-  <link rel="icon" href="./image.png" />
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-  <!-- //Font google -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700&display=swap"
-    rel="stylesheet">
+    <title>Image Finder | fetch api Pexels</title>
+  </head>
 
-  <title>Image Finder | fetch api Pexels</title>
-</head>
-
-<body>
-  <main>
-    <form class="welcom">
-      <div class="content-welcom">
-        <h1>Image Finder</h1>
-        <div class="achroche-text">
-          <p>Find the perfect photo for all your projects with ImageFinder, the royalty-free image platform powered by
-            <a href="https://www.pexels.com/" target="_blank">Pexels</a> !
-          </p>
+  <body>
+    <main>
+      <form class="welcom">
+        <div class="content-welcom">
+          <h1>Image Finder</h1>
+          <div class="achroche-text">
+            <p>
+              Find the perfect photo for all your projects with ImageFinder, the
+              royalty-free image platform powered by
+              <a href="https://www.pexels.com/" target="_blank">Pexels</a> !
+            </p>
+          </div>
+          <div class="input-group search-box">
+            <input
+              id="search"
+              type="search"
+              class="form-control"
+              placeholder="Enter your search here"
+            />
+            <button
+              id="btnValidate"
+              type="button"
+              class="input-group-text"
+              aria-label="Search icon"
+              title="Search"
+            >
+              <i class="ri-search-2-line"></i>
+            </button>
+          </div>
         </div>
-        <div class="input-group search-box">
-          <input id="search" type="search" class="form-control" placeholder="Enter your search here">
-          <button id="btnValidate" type="button" class="input-group-text" aria-label="Search icon" title="Search"><i
-              class="ri-search-2-line"></i></button>
+      </form>
+      <div class="choice-img-video">
+        <div><a href="#" class="image active">Image</a></div>
+        <div><a href="./video.html" class="Video">Video</a></div>
+      </div>
+      <div class="title-of-research-box">
+        <h2 class="title-of-research"></h2>
+      </div>
+      <section id="content-box" class="content-box">
+        <div id="img-box" class="img-box">
+          <div class="image">
+            <figure>
+              <img
+                src="https://images.pexels.com/photos/807598/pexels-photo-807598.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+              />
+              <figcaption><i class="ri-user-fill"></i></figcaption>
+              <a href="https://www.pexels.com/@sohi" target="_blank"
+                >sohail nachiti</a
+              >
+            </figure>
+          </div>
         </div>
-      </div>
-    </form>
-    <div class="choice-img-video">
-      <div><a href="#" class="image active">Image</a></div>
-      <div><a href="./video.html" class="Video">Video</a></div>
+      </section>
+    </main>
+    <!-- <div class="container"> -->
+    <div class="overlay" id="overlay">
+      <figure>
+        <img src="./bcgImage.jpeg" alt="essai" />
+        <figcaption>Hello</figcaption>
+      </figure>
     </div>
-    <div class="title-of-research-box">
-      <h2 class="title-of-research"></h2>
-    </div>
-    <section id="content-box" class="content-box">
-      <div id="img-box" class="img-box">
-        <!-- <div class="image">
-          <figure>
-            <img
-              src="https://images.pexels.com/photos/807598/pexels-photo-807598.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
-            <figcaption><i class="ri-user-fill"></i>
-            </figcaption>
-            <a href="https://www.pexels.com/@sohi" target="_blank">sohail nachiti</a>
-          </figure>
-        </div> -->
-      </div>
-    </section>
-  </main>
+    <!-- </div> -->
 
-
-  <script src="./app.js"></script>
-</body>
-
+    <script src="./app.js"></script>
+  </body>
 </html>
