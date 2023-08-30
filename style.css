@@ -15,6 +15,7 @@ body {
   letter-spacing: 0.5rem;
   line-height: 3rem;
   position: relative;
+  /* overflow: hidden; */
 }
 
 main {
@@ -144,6 +145,7 @@ main .title-of-research-box {
 
 main .title-of-research-box h2 {
   font-size: 1.8rem;
+  display: none;
 }
 
 main .content-box {
@@ -190,18 +192,50 @@ figure a:hover ~ figure img {
 }
 
 figcaption {
-  padding-left: 1rem;
   position: absolute;
-  bottom: 1rem;
-  left: 0rem;
-  visibility: hidden;
+  left: 0rem; 
+  padding: 0;
+  width: 100%;
+  /* height: 1rem; */
+  bottom: 1.4rem;
+  /* visibility: hidden; */
   transition: all 0.2s ease-in-out;
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+} 
+
+figcaption .link-photographer{
+display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #fff;
 }
 
-main .content-box .img-box figure img:hover ~ figcaption,
+figcaption .btn-download-icon{
+  border: 1px solid blue;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+figcaption .btn-download-icon i{
+  display: block;
+  align-self: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: red;
+  background-color: var(--bgc);
+  height: 2rem;
+  margin: auto;
+}
+
+/* main .content-box .img-box figure img:hover ~ figcaption,
 figure a:hover ~ figcaption {
   visibility: visible;
-}
+} */
 
 figcaption i {
   color: #fff;
@@ -209,10 +243,9 @@ figcaption i {
 }
 
 figure a {
-  position: absolute;
+  /* position: absolute;
   left: 2rem;
-  bottom: 1.5rem;
-  padding-left: 1rem;
+  bottom: 1.5rem; */
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: 700;
@@ -220,7 +253,6 @@ figure a {
   line-height: 2rem;
   color: #fff;
   z-index: 99;
-  visibility: hidden;
   transition: all 0.2s ease-in-out;
 }
 
@@ -292,21 +324,23 @@ figure a:hover {
 
 .overlay {
   height: 100vh;
-  width: 60%;
+  width: 100%;
   position: fixed;
-  top: 0%;
+  top: 0;
+  /* left: -100%; */
   left: 0%;
-  right: 0;
-  bottom: 0;
   margin: auto;
-  background-color: #000;
-  /* background-color: transparent; */
-  filter: brightness(100%);
+  /* background-color: #000; */
+  background-color: transparent;
+  z-index: 1;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   display: flex;
   align-items: center;
   justify-content: center;
-  border: yellow 10px solid;
+  /* border: yellow 10px solid; */
   display: none;
+  overflow: hidden;
 }
 
 .overlay figure {
@@ -316,6 +350,7 @@ figure a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: var(--bgc);
 }
 
 .overlay figure img {
