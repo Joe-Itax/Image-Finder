@@ -155,7 +155,7 @@ const query1 = listDefaultQuery1[randomQuery1];
 const query2 = listDefaultQuery2[randomQuery2];
 titltOfRsearch.textContent = `${query1} and ${query2}`;
 console.log(`${query1} and ${query2}`);
-let url = `https://api.pexels.com/videos/search?query=${query1}+and+${query2}&per_page=15`;
+let url = `https://api.pexels.com/videos/search?query=${query1}+and+${query2}&per_page=7`;
 fetch(url, {
   headers: {
     Authorization: 'PUpg6u4IM4rBsAkLq5vVcmS4c03dj6TkcVOrDM9AYPo6tE9UUqhw77UC',
@@ -169,17 +169,17 @@ fetch(url, {
     for (let i = 0; i < data.videos.length; i++) {
       html += `
     <div class="image">
-        <figure>
-          <video controls width="250">
-  <source src="${data.videos[i].url}" type="video/webm" />
-</video>
+      <video controls autoplay loop width="300">
+        <source src="${data.videos[i].video_files[0].link}" type="video/mp4" />
+      </video>
+      </div>
+      `;
+      /*<figure>
           <figcaption>
             <i class="ri-user-fill"></i>
             
           </figcaption>
-        </figure>
-      </div>
-      `;
+        </figure>*/
     }
     imgBox.innerHTML = html;
   });
@@ -205,16 +205,17 @@ const onValidate = (event) => {
       for (let i = 0; i < data.photos.length; i++) {
         html += `
     <div class="image">
-        <figure>
-  <source src="${data.videos[i].url}" type="video/webm" />
-</video>
-          <figcaption>
-            <i class="ri-user-fill"></i>
-            <a href="${data.photos[i].photographer_url}" target="_blank">${data.photos[i].photographer}</a>
-          </figcaption>
-        </figure>
+      <video controls autoplay loop width="250">
+        <source src="${data.videos[i].video_files[0].link}" type="video/mp4"  />
+      </video>
       </div>
       `;
+        // <figure>
+        //   <figcaption>
+        //     <i class="ri-user-fill"></i>
+        //     <a href="${data.photos[i].photographer_url}" target="_blank">${data.photos[i].photographer}</a>
+        //   </figcaption>
+        // </figure>
       }
       imgBox.innerHTML = html;
     });
