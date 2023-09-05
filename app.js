@@ -29,7 +29,6 @@ detailImg.addEventListener('mousemove', () => {
 
 
 
-/*
 const contentBox = document.querySelector('#content-box'); //La section
 const imgBox = document.querySelector('#img-box'); //section>div
 //section>div>.image
@@ -171,10 +170,10 @@ fetch(url, {
     <div class="image">
         <figure>
           <img src="${data.photos[i].src.large2x}" alt="${data.photos[i].alt}" title="${data.photos[i].alt}"/>
-          <figcaption>
+          <!--<figcaption>
             <i class="ri-user-fill"></i>
             <a href="${data.photos[i].photographer_url}" target="_blank">${data.photos[i].photographer}</a>
-          </figcaption>
+          </figcaption>-->
         </figure>
       </div>
       `;
@@ -226,4 +225,3 @@ searchValue.addEventListener('keydown', (event) => {
     onValidate(event); // Appelle la fonction onValidate avec l'événement en paramètre
   }
 });
-*/

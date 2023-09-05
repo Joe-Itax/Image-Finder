@@ -155,7 +155,7 @@ const query1 = listDefaultQuery1[randomQuery1];
 const query2 = listDefaultQuery2[randomQuery2];
 titltOfRsearch.textContent = `${query1} and ${query2}`;
 console.log(`${query1} and ${query2}`);
-let url = `https://api.pexels.com/videos/search?query=${query1}+and+${query2}&per_page=7`;
+let url = `https://api.pexels.com/videos/search?query=${query1}+and+${query2}&per_page=20`;
 fetch(url, {
   headers: {
     Authorization: 'PUpg6u4IM4rBsAkLq5vVcmS4c03dj6TkcVOrDM9AYPo6tE9UUqhw77UC',
@@ -202,7 +202,7 @@ const onValidate = (event) => {
       console.log(data);
       // console.log(data.photos[0].id);
       let html = ''; //Variable qui va stocker le code html
-      for (let i = 0; i < data.photos.length; i++) {
+      for (let i = 0; i < data.videos.length; i++) {
         html += `
     <div class="image">
       <video controls autoplay loop width="250">
