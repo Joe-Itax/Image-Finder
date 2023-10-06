@@ -8,25 +8,52 @@
     <!-- <link href="./style.css" rel="stylesheet" /> -->
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="./styleTailwindCustom.css" rel="stylesheet" type="text/tailwindcss"/>
+    <link
+      href="./styleTailwindCustom.css"
+      rel="stylesheet"
+      type="text/tailwindcss"
+    />
     <link rel="icon" href="./image.png" />
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <!-- Import remixicon -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <!-- //Font google -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700&display=swap" rel="stylesheet"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
 
-    <title>Image Finder | fetch api Pexels</title>
+    <title>Image Finder | fetch api Unsplash</title>
   </head>
 
-  <body  class="z-10 bg-white">
+  <body class="relative z-10 bg-white">
     <main class="z-10 bg-white">
-      <form class="welcom bg-[url('./low-poly-grid-haikei.svg')] bg-cover bg-no-repeat bg-center h-screen text-white flex flex-col items-center justify-center gap-10">
-        <div class="content-welcom flex flex-col justify-center gap-10 w-4/5 lg:w-3/5">
-          <h1 class="text-stone-50 text-5xl md:text-7xl lg:text-8xl font-bold custom-class-test">Image Finder</h1>
+      <form
+        class="welcom bg-[url('./low-poly-grid-haikei.svg')] bg-cover bg-no-repeat bg-center h-screen text-white flex flex-col items-center justify-center gap-10"
+      >
+        <div
+          class="content-welcom flex flex-col justify-center gap-10 w-4/5 lg:w-3/5"
+        >
+          <h1
+            class="text-stone-50 text-5xl md:text-7xl lg:text-8xl font-bold custom-class-test"
+          >
+            Image Finder
+          </h1>
           <div>
             <p class="text-xl md:text-2xl lg:text-3xl">
-              Find the perfect photo for all your projects with ImageFinder, the royalty-free image platform powered by <a class="text-xl md:text-2xl lg:text-3xl underline transition-all hover:no-underline" href="https://unsplash.com/fr" target="_blank" rel="noopener">Unsplash</a>!
+              Find the perfect photo for all your projects with ImageFinder, the
+              royalty-free image platform powered by
+              <a
+                class="text-xl md:text-2xl lg:text-3xl underline transition-all hover:no-underline"
+                href="https://unsplash.com/fr"
+                target="_blank"
+                rel="noopener"
+                >Unsplash</a
+              >!
             </p>
           </div>
           <div class="w-full bg-white flex h-12 md:h-16">
@@ -37,31 +64,58 @@
               placeholder="Enter your search here"
             />
             <button
-              id="btnValidate" type="button" class="input-group-text w-1/5 text-black text-2xl border-l-2 border-gray-600 text-gray-600 border-solid" aria-label="Search icon" title="Search">
+              id="btnValidate"
+              type="button"
+              class="input-group-text w-1/5 text-black text-2xl border-l-2 border-gray-600 text-gray-600 border-solid"
+              aria-label="Search icon"
+              title="Search"
+            >
               <i class="ri-search-2-line"></i>
             </button>
           </div>
         </div>
       </form>
-      <div class="choice-img-video w-2/4 m-auto p-4 gap-x-4 flex justify-center items-center mb-12 mt-12">
+      <div
+        class="choice-img-video w-2/4 m-auto p-4 gap-x-4 flex justify-center items-center mb-12 mt-12"
+      >
         <div>
-          <a href="#" class="text-lg px-4 py-2 rounded-lg bg-blue-400 border-2 border-blue-400 text-white transition-all ease-in-out hover:bg-transparent hover:text-black md:text-xl md:px-6 md:py-3">Image</a>
+          <a
+            href="#"
+            class="text-lg px-4 py-2 rounded-lg bg-blue-400 border-2 border-blue-400 text-white transition-all ease-in-out hover:bg-transparent hover:text-black md:text-xl md:px-6 md:py-3"
+            >Image</a
+          >
         </div>
         <div>
-          <a href="#" class="text-lg px-4 py-2 rounded-lg border-2 border-blue-400 transition-all ease-in-out hover:bg-blue-400 hover:text-white md:text-xl md:px-6 md:py-3">Video</a>
+          <a
+            href="#"
+            class="text-lg px-4 py-2 rounded-lg border-2 border-blue-400 transition-all ease-in-out hover:bg-blue-400 hover:text-white md:text-xl md:px-6 md:py-3"
+            >Video</a
+          >
         </div>
       </div>
       <div class="title-of-research-box">
-        <h2 class="title-of-research ml-4 mb-8 text-xl underline md:text-2xl hidden">Query</h2>
+        <h2
+          class="title-of-research ml-4 mb-8 text-xl underline md:text-2xl hidden"
+        >
+          Query
+        </h2>
       </div>
       <section id="content-box" class="content-box">
-        <div id="img-box" class="img-box my-0 mx-auto grid grid-cols-2 md:grid-cols-3 md:grid-cols-3 gap-4 auto-rows-min grid-flow-row-dense grid-flow-col-dense items-stretch p-4">
+        <div
+          id="img-box"
+          class="img-box my-0 mx-auto grid grid-cols-2 md:grid-cols-3 md:grid-cols-3 gap-4 auto-rows-min grid-flow-row-dense grid-flow-col-dense items-stretch p-4"
+        >
           <!-- Contenu Html fournit à partir de JS -->
         </div>
       </section>
     </main>
 
-    <div class="relative principal-open-overlay -z-50" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <section
+      class="relative principal-open-overlay -z-50"
+      aria-labelledby="modal-title"
+      role="dialog"
+      aria-modal="true"
+    >
       <!--
     Background backdrop, show/hide based on modal state.
 
@@ -73,8 +127,12 @@
       To: "opacity-0"
   -->
 
-      <div class="fixed inset-0 overflow-y-auto bg-transparent backdrop-blur-sm">
-        <div class="flex min-h-full relative items-end justify-center text-center sm:items-center sm:p-0">
+      <div
+        class="fixed inset-0 overflow-y-auto bg-transparent backdrop-blur-sm"
+      >
+        <div
+          class="flex min-h-full relative items-end justify-center text-center sm:items-center sm:p-0"
+        >
           <!--
           Modal panel, show/hide based on modal state.
   
@@ -86,32 +144,89 @@
             To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
         -->
           <div class="m-3 absolute top-0 right-0 z-10">
-            <button id="btn-close" class="bg-white border-2 border-gray-600 rounded-full">
-              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
-                <path fill="currentcolor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/>
+            <button
+              id="btn-close"
+              class="bg-white border-2 border-gray-600 rounded-full"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentcolor"
+                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"
+                />
               </svg>
             </button>
           </div>
           <div class="image relative w-10/12 m-auto" id="open-overlay">
             <!-- Html fourni par JS -->
             <figure class="relative">
-              <img src="https://images.pexels.com/photos/5560867/pexels-photo-5560867.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="Man surfing on blue sea water" id="5560867" title="Man surfing on blue sea water" class="classImageTest">
-              <figcaption class="detail-img h-auto bg-transparent backdrop-blur-sm absolute w-full left-0 bottom-0 p-1 text-white flex justify-between md:text-xl px-2.5">
+              <img
+                src="https://images.pexels.com/photos/5560867/pexels-photo-5560867.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940"
+                alt="Man surfing on blue sea water"
+                id="5560867"
+                title="Man surfing on blue sea water"
+                class="classImageTest"
+              />
+              <figcaption
+                class="detail-img h-auto bg-transparent backdrop-blur-sm absolute w-full left-0 bottom-0 p-1 text-white flex justify-between md:text-xl px-2.5"
+              >
                 <div class="link-photographer">
-                  <a href="https://www.pexels.com/@alohaphotostudio" target="_blank" title="photographer: Daniel Torobekov" class="text-lg md:text-xl">
+                  <a
+                    href="https://www.pexels.com/@alohaphotostudio"
+                    target="_blank"
+                    title="photographer: Daniel Torobekov"
+                    class="text-lg md:text-xl"
+                  >
                     <i class="ri-user-fill"></i>
                   </a>
                 </div>
                 <div class="btn-download-box">
-                  <button type="button" title="Télécharger cette image" class="btnDownload" id="5560867"><i class="ri-download-fill text-lg md:text-xl"></i></button>
+                  <button
+                    type="button"
+                    title="Télécharger cette image"
+                    class="btnDownload"
+                    id="5560867"
+                  >
+                    <i class="ri-download-fill text-lg md:text-xl"></i>
+                  </button>
                 </div>
               </figcaption>
             </figure>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
+    <!-- Footer -->
+    <footer
+      class="bg-[#111827] w-full h-40 text-[#eee] text-lg flex justify-center items-center p-8 text-center gap-8 flex-col-reverse md:flex-row md:justify-between"
+    >
+      <div class="foo1">
+        <p>&copy; 2023 Made by Itax.</p>
+      </div>
+      <div class="foo2 flex gap-4 text-[#6b7280]">
+        <!-- Facebook -->
+        <a href="http://" target="_blank" rel="noopener noreferrer">
+          <i class="ri-facebook-circle-fill"></i>
+        </a>
+        <!-- Twitter -->
+        <a href="http://" target="_blank" rel="noopener noreferrer">
+          <i class="ri-twitter-x-fill"></i>
+        </a>
+        <!-- Github -->
+        <a href="http://" target="_blank" rel="noopener noreferrer">
+          <i class="ri-github-fill"></i>
+        </a>
+        <!-- Youtube -->
+        <a href="http://" target="_blank" rel="noopener noreferrer">
+          <i class="ri-youtube-fill"></i>
+        </a>
+      </div>
+    </footer>
     <script src="./app.js"></script>
   </body>
 </html>

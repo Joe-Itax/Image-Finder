@@ -1,20 +1,19 @@
-
 // ---------------
-const openOverlay = document.querySelector("#open-overlay");
-const btnClose = document.querySelector("#btn-close");
-const principalOpenOverlay = document.querySelector(".principal-open-overlay");
-btnClose.addEventListener("click", () => {
-  principalOpenOverlay.classList.add("-z-50");
-  document.body.classList.remove("overflow-hidden");//C'est fait
-})
+const openOverlay = document.querySelector('#open-overlay');
+const btnClose = document.querySelector('#btn-close');
+const principalOpenOverlay = document.querySelector('.principal-open-overlay');
+btnClose.addEventListener('click', () => {
+  principalOpenOverlay.classList.add('-z-50');
+  document.body.classList.remove('overflow-hidden'); //C'est fait
+});
 // Déclarer la fonction
 const handleImageClicks = () => {
   const clickOnImage = document.querySelectorAll('figure > img.classImageTest');
   clickOnImage.forEach((image) => {
     image.addEventListener('click', () => {
       console.table(image.id);
-      principalOpenOverlay.classList.remove("-z-50");
-      document.body.classList.add("overflow-hidden");
+      principalOpenOverlay.classList.remove('-z-50');
+      document.body.classList.add('overflow-hidden');
       openOverlay.innerHTML = `
         <figure class="relative">
           <img src="${image.src}" alt="${image.alt}" title="${image.title}" class="w-full"/>
@@ -200,8 +199,8 @@ titltOfRsearch.textContent = `${query1} and ${query2}`;
 let query = titltOfRsearch.textContent;
 let url = `https://api.unsplash.com/search/photos/?query=${query}&per_page=30&client_id=OHXabCxP14DXrZMvtHr7qFjUeLe7DvnncGA_LAC_dm0`;
 fetch(url)
-  .then(response => response.json())
-  .then(data => {
+  .then((response) => response.json())
+  .then((data) => {
     console.log(data);
     console.log(data.results);
 
@@ -244,7 +243,7 @@ fetch(url)
     }
     handleImageClicks();
     handleBtnDownloadClick();
-  })
+  });
 // ------------------------------------------------------------
 //Selon l'input du user
 const onValidate = (event) => {
