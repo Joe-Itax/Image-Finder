@@ -19,14 +19,14 @@
     <title>Image Finder | fetch api Pexels</title>
   </head>
 
-  <body class="relative">
-    <main>
+  <body  class="z-10 bg-white">
+    <main class="z-10 bg-white">
       <form class="welcom bg-[url('./low-poly-grid-haikei.svg')] bg-cover bg-no-repeat bg-center h-screen text-white flex flex-col items-center justify-center gap-10">
         <div class="content-welcom flex flex-col justify-center gap-10 w-4/5 lg:w-3/5">
           <h1 class="text-stone-50 text-5xl md:text-7xl lg:text-8xl font-bold custom-class-test">Image Finder</h1>
           <div>
             <p class="text-xl md:text-2xl lg:text-3xl">
-              Find the perfect photo for all your projects with ImageFinder, the royalty-free image platform powered by<a class="text-xl md:text-2xl lg:text-3xl underline transition-all hover:no-underline" href="https://www.pexels.com/" target="_blank" rel="noopener">Pexels</a>!
+              Find the perfect photo for all your projects with ImageFinder, the royalty-free image platform powered by <a class="text-xl md:text-2xl lg:text-3xl underline transition-all hover:no-underline" href="https://unsplash.com/fr" target="_blank" rel="noopener">Unsplash</a>!
             </p>
           </div>
           <div class="w-full bg-white flex h-12 md:h-16">
@@ -61,7 +61,7 @@
       </section>
     </main>
 
-    <div class="relative z-10 principal-open-overlay hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div class="relative principal-open-overlay -z-50" aria-labelledby="modal-title" role="dialog" aria-modal="true">
       <!--
     Background backdrop, show/hide based on modal state.
 
@@ -73,7 +73,7 @@
       To: "opacity-0"
   -->
 
-      <div class="fixed inset-0 z-10 overflow-y-auto bg-transparent backdrop-blur-sm">
+      <div class="fixed inset-0 overflow-y-auto bg-transparent backdrop-blur-sm">
         <div class="flex min-h-full relative items-end justify-center text-center sm:items-center sm:p-0">
           <!--
           Modal panel, show/hide based on modal state.
@@ -94,6 +94,19 @@
           </div>
           <div class="image relative w-10/12 m-auto" id="open-overlay">
             <!-- Html fourni par JS -->
+            <figure class="relative">
+              <img src="https://images.pexels.com/photos/5560867/pexels-photo-5560867.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="Man surfing on blue sea water" id="5560867" title="Man surfing on blue sea water" class="classImageTest">
+              <figcaption class="detail-img h-auto bg-transparent backdrop-blur-sm absolute w-full left-0 bottom-0 p-1 text-white flex justify-between md:text-xl px-2.5">
+                <div class="link-photographer">
+                  <a href="https://www.pexels.com/@alohaphotostudio" target="_blank" title="photographer: Daniel Torobekov" class="text-lg md:text-xl">
+                    <i class="ri-user-fill"></i>
+                  </a>
+                </div>
+                <div class="btn-download-box">
+                  <button type="button" title="Télécharger cette image" class="btnDownload" id="5560867"><i class="ri-download-fill text-lg md:text-xl"></i></button>
+                </div>
+              </figcaption>
+            </figure>
           </div>
         </div>
       </div>
