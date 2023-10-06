@@ -1,7 +1,0 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-.text-h1 {
-  @apply text-teal-400 text-3xl font-bold;
-}
