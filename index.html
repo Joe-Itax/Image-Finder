@@ -31,10 +31,17 @@
   </head>
 
   <body class="relative z-10 bg-white">
-    <main class="z-10 bg-white">
+    <main class="z-50 bg-white">
       <form
-        class="welcom bg-[url('./low-poly-grid-haikei.svg')] bg-cover bg-no-repeat bg-center h-screen text-white flex flex-col items-center justify-center gap-10"
+        class="welcom bg-[url('./low-poly-grid-haikei.svg')] bg-cover bg-no-repeat bg-center h-screen text-white flex flex-col items-center justify-center gap-10 relative"
       >
+        <!-- Logo -->
+        <div class="absolute z-10 top-4 left-4">
+          <a href="./index.html" class="rounded-full">
+            <img src="whiteLogo.jpg" alt="Logo Image Finder" class="rounded-full w-12"/>
+          </a>
+        </div>
+        <!-- Fin logo -->
         <div
           class="content-welcom flex flex-col justify-center gap-10 w-4/5 lg:w-3/5"
         >
@@ -203,27 +210,27 @@
 
     <!-- Footer -->
     <footer
-      class="bg-[#111827] w-full h-40 text-[#eee] text-lg flex justify-center items-center p-8 text-center gap-8 flex-col-reverse md:flex-row md:justify-between"
+      class="bg-[#111827] w-full h-40 text-[#eee] text-2xl flex justify-center items-center p-8 text-center gap-8 flex-col-reverse md:flex-row md:justify-between"
     >
       <div class="foo1">
         <p>&copy; 2023 Made by Itax.</p>
       </div>
       <div class="foo2 flex gap-4 text-[#6b7280]">
+        <!-- Github -->
+        <a href="https://github.com/Joseph-Itakala" target="_blank" rel="noopener noreferrer">
+          <i class="ri-github-fill"></i>
+        </a>
+        <!-- Linkdin -->
+        <a href="https://www.linkedin.com/in/joseph-itakala-2a6465250/" target="_blank" rel="noopener noreferrer">
+          <i class="ri-linkedin-box-fill"></i>
+        </a>
         <!-- Facebook -->
-        <a href="http://" target="_blank" rel="noopener noreferrer">
+        <a href="https://web.facebook.com/joseph.itakala.102" target="_blank" rel="noopener noreferrer">
           <i class="ri-facebook-circle-fill"></i>
         </a>
         <!-- Twitter -->
-        <a href="http://" target="_blank" rel="noopener noreferrer">
+        <a href="https://twitter.com/Joseph_Itakala" target="_blank" rel="noopener noreferrer">
           <i class="ri-twitter-x-fill"></i>
-        </a>
-        <!-- Github -->
-        <a href="http://" target="_blank" rel="noopener noreferrer">
-          <i class="ri-github-fill"></i>
-        </a>
-        <!-- Youtube -->
-        <a href="http://" target="_blank" rel="noopener noreferrer">
-          <i class="ri-youtube-fill"></i>
         </a>
       </div>
     </footer>
