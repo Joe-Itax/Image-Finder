@@ -1,0 +1,13 @@
+.container-next-page {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 1rem;
+}
+
+.next-page-content {
+  text-decoration: underline;
+}
+
+.next-page-content:hover {
+  text-decoration: none;
+}
