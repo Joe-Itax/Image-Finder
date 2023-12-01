@@ -3,7 +3,7 @@ const openOverlay = document.querySelector('#open-overlay');
 const btnClose = document.querySelector('#btn-close');
 const principalOpenOverlay = document.querySelector('.principal-open-overlay');
 btnClose.addEventListener('click', () => {
-  principalOpenOverlay.classList.add('-z-50');
+  principalOpenOverlay.classList.add('hidden');
   document.body.classList.remove('overflow-hidden'); //C'est fait
 });
 // Déclarer la fonction
@@ -11,11 +11,11 @@ const handleImageClicks = () => {
   const clickOnImage = document.querySelectorAll('figure > img.classImageTest');
   clickOnImage.forEach((image) => {
     image.addEventListener('click', () => {
-      principalOpenOverlay.classList.remove('-z-50');
+      principalOpenOverlay.classList.remove('hidden');//-z-50
       document.body.classList.add('overflow-hidden');
       openOverlay.innerHTML = `
-        <figure class="relative">
-          <img src="${image.src}" alt="${image.alt}" title="${image.title}" class="w-full"/>
+        <figure class="relative h-screen flex flex-col justify-center items-center overflow-hidden">
+          <img src="${image.src}" alt="${image.alt}" title="${image.title}" class="h-auto"/>
           <figcaption class="detail-img h-auto bg-transparent backdrop-blur-sm absolute w-full left-0 bottom-0 p-1 text-white flex justify-between md:text-xl px-2.5">
             <div class="link-photographer">
               <a href="$" target="_blank" title="photographer: $" class="text-2xl md:text-4xl xl:text-7xl">
