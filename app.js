@@ -3,7 +3,7 @@ const openOverlay = document.querySelector('#open-overlay');
 const btnClose = document.querySelector('#btn-close');
 const principalOpenOverlay = document.querySelector('.principal-open-overlay');
 btnClose.addEventListener('click', () => {
-  principalOpenOverlay.classList.add('-z-50');
+  principalOpenOverlay.classList.add('hidden');
   document.body.classList.remove('overflow-hidden'); //C'est fait
 });
 // Déclarer la fonction
@@ -11,12 +11,11 @@ const handleImageClicks = () => {
   const clickOnImage = document.querySelectorAll('figure > img.classImageTest');
   clickOnImage.forEach((image) => {
     image.addEventListener('click', () => {
-      console.table(image.id);
-      principalOpenOverlay.classList.remove('-z-50');
+      principalOpenOverlay.classList.remove('hidden');//-z-50
       document.body.classList.add('overflow-hidden');
       openOverlay.innerHTML = `
-        <figure class="relative">
-          <img src="${image.src}" alt="${image.alt}" title="${image.title}" class="w-full cursor-zoom-in"/>
+        <figure class="relative h-screen flex flex-col justify-center items-center overflow-hidden">
+          <img src="${image.src}" alt="${image.alt}" title="${image.title}" class="h-auto"/>
           <figcaption class="detail-img h-auto bg-transparent backdrop-blur-sm absolute w-full left-0 bottom-0 p-1 text-white flex justify-between md:text-xl px-2.5">
             <div class="link-photographer">
               <a href="$" target="_blank" title="photographer: $" class="text-2xl md:text-4xl xl:text-7xl">
@@ -40,7 +39,6 @@ const handleBtnDownloadClick = () => {
   btnDownload.forEach((btn) => {
     btn.addEventListener('click', () => {
       imageCorrespondant.forEach((image) => {
-        // console.table(image.id);
         if (image.id === btn.id) {
           // Récupérer le contenu de l'image
           fetch(image.src)
@@ -255,12 +253,12 @@ const query1 = listDefaultQuery1[randomQuery1];
 const query2 = listDefaultQuery2[randomQuery2];
 titltOfRsearch.textContent = `${query1} and ${query2}`;
 let query = titltOfRsearch.textContent;
-let url = `https://api.unsplash.com/search/photos/?query=${query}&per_page=30&page=${page}&client_id=OHXabCxP14DXrZMvtHr7qFjUeLe7DvnncGA_LAC_dm0`;
+let url = `https://api.unsplash.com/search/photos/?query=${query}&per_page=30&page=${page}&client_id=HiXX9RQ2LfCN71STnuryS31srNdccFWAVxfSYhD5vrg`;
 fetch(url)
   .then((response) => response.json())
   .then((data) => {
     nextPageDirection(data);
-
+console.log(data);
     for (let i = 0; i < data.results.length; i++) {
       const li = document.createElement('li');
       li.classList.add('mb-4');
@@ -311,12 +309,11 @@ const onValidate = (event) => {
   query = searchValue.value;
   titltOfRsearch.classList.remove('hidden');
   titltOfRsearch.textContent = query;
-  url = `https://api.unsplash.com/search/photos/?page=1&query=${query}&per_page=30&${page}&client_id=OHXabCxP14DXrZMvtHr7qFjUeLe7DvnncGA_LAC_dm0`;
+  url = `https://api.unsplash.com/search/photos/?page=1&query=${query}&per_page=30&${page}&client_id=HiXX9RQ2LfCN71STnuryS31srNdccFWAVxfSYhD5vrg`;
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
       nextPageDirection(data);
-      console.log(data);
       let html = ''; //Variable qui va stocker le code html
       for (let i = 0; i < data.results.length; i++) {
         const li = document.createElement('li');
